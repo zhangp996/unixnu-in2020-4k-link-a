@@ -1,0 +1,11 @@
+diff --git a/makedefs/MakeInc.def b/makedefs/MakeInc.def
+--- a/makedefs/MakeInc.def
++++ b/makedefs/MakeInc.def
+@@ -928,7 +928,6 @@
+ MIGKSFLAGS = \
+ 	-DMACH_KERNEL_PRIVATE \
+ 	-DKERNEL_SERVER=1 \
+-	-mach_msg2
+ 
+ #
+ # Default MIG KernelUser flags

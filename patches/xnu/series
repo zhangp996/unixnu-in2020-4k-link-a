@@ -1,1 +1,3 @@
 0001-bootstrap-capacity-64.patch
+0101-remove-mach-msg2-flag.patch
+0102-driverkit-iorpc-stub.patch

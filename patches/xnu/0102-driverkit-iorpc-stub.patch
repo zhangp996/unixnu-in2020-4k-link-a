@@ -1,0 +1,20 @@
+diff --git a/iokit/IOKit/IORPC.h b/iokit/IOKit/IORPC.h
+--- a/iokit/IOKit/IORPC.h
++++ b/iokit/IOKit/IORPC.h
+@@ -190,6 +190,16 @@
+ #pragma pack(pop)
+ typedef struct IORPCMessage IORPCMessage;
+ 
++#ifdef KERNEL
++/* Xcode 16 source build: DriverKit IIG expects this symbol without a kernel definition. */
++static inline IORPCMessage *
++IORPCMessageFromMach(IORPCMessageMach *msg, bool reply)
++{
++	(void)reply;
++	return (IORPCMessage *)msg;
++}
++#endif
++
+ #ifndef KERNEL
+ 
+ #if defined(__cplusplus)
